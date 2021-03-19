@@ -222,6 +222,8 @@
                     </executions>
                     <configuration>
                         <imageName>192.168.116.133:5000/mall/${project.artifactId}:${project.version}</imageName>
+                        <pushImage>true</pushImage>
+                        <registryUrl>192.168.116.133:5000</registryUrl>
                         <dockerHost>${docker.host}</dockerHost>
                         <baseImage>java:8</baseImage>
                         <entryPoint>["java", "-jar", "-Dspring.profiles.active=prod","/${project.build.finalName}.jar"]
